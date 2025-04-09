@@ -1,16 +1,17 @@
-FROM python:3.10-slim
+# Use a stable and supported Python version
+FROM python:3.9-slim
 
-# Set work directory
+# Set working directory
 WORKDIR /app
 
-# Copy project files
+# Copy files
 COPY . .
 
-# Install Python dependencies
+# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose port
+# Expose the port used by Chainlit
 EXPOSE 7860
 
-# Run Chainlit
+# Run Chainlit app
 CMD ["chainlit", "run", "main.py", "--host=0.0.0.0", "--port=7860"]
