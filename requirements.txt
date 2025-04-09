@@ -1,0 +1,7 @@
+# Optional - Uncomment if needed
+# openai
+# langchain
+# python-dotenv
+# requests
+# fastapi
+# uvicorn
